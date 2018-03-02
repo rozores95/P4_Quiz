@@ -47,12 +47,14 @@ exports.showCmd = (rl, id) => {
    
    if (typeof id === "undefined"){
      errorlog(`Falta el parámetro id.`);
+       rl.prompt();
    }else {
      try{
        const quiz = model.getByIndex(id);
        log ( `[${colorize(id, 'magenta')}]: ${quiz.question} ${colorize('=>','magenta')} ${quiz.answer}`);
      }catch(error){
        errorlog(error.message);
+         rl.prompt();
      }
    }
    
@@ -62,6 +64,7 @@ exports.showCmd = (rl, id) => {
 exports.testCmd = (rl, id) => {
 if (typeof id === "undefined"){
      errorlog(`Falta el parámetro id.`);
+       rl.prompt();
    }else {
      try{
        const quiz = model.getByIndex(id);
@@ -85,6 +88,7 @@ if (typeof id === "undefined"){
    }
     catch(error){
        errorlog(`el valor del parametro id no es valido`);
+         rl.prompt();
      }
    
     rl.prompt();
