@@ -91,6 +91,37 @@ if (typeof id === "undefined"){
  }
 }
 
+exports.testCmd=(rl,id)=>{
+    if(typeof id === "undefined"){
+       errorlog(`falta el parametro id`);
+       rl.prompt();
+     } else {
+       try{
+         const quiz = model.getByIndex(id);
+             
+        
+         rl.question(`${colorize(quiz.question,'red')} ${colorize("?",'red')} `,hola=>{
+       const hola1 =  hola.trim();
+         
+            if(hola1===quiz.answer){
+              log("Su respuesta es correcta.");
+             biglog('CORRECTO :D','green');
+             rl.prompt();
+            }
+            else{
+              log("Su respuesta es incorrecta.");
+              biglog("INCORRECTO :( ",'red');  
+              rl.prompt();}
+         
+           
+         });   
+          }catch(error){
+            
+
+       errorlog('el valor del parametro id no es valido')
+       rl.prompt();
+     }}
+         };
 exports.playCmd = rl => {
     let marcador = 0;
     let aux = [];
