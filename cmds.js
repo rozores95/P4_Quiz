@@ -116,16 +116,16 @@ exports.playCmd = rl => {
        aux.splice(pos, 1);
        b--;
        rl.question
-       (`${colorize(opcion.question, 'red')}`, respuesta1 =>{
+       (`${colorize(opcion.question, 'red')} ${colorize("?",'red')}`, respuesta1 =>{
          respuesta = respuesta1.trim();
         if(respuesta === opcion.answer){
           marcador++;
-          log("CORRECTO - Lleva  "  +marcador+"   aciertos");
+          log("CORRECTO - Lleva "+marcador+" aciertos");
            
             jugaraux();      
          
        }else {
-         log( "INCORRECTO");
+         log("Su respuesta es incorrecta.");
          log("Fin del juego. Aciertos "+marcador);
          biglog ( marcador, 'magenta');
          rl.prompt();
