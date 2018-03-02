@@ -115,7 +115,7 @@ exports.playCmd = rl => {
         //log(aux[pos]);
         let idaux = aux[pos];
         let opcion = model.getByIndex(idaux); //esto guarda el quiz del id aux
-       aux.splice(idaux, 1);
+       aux.splice(pos, 1);
        b--;
        rl.question
        (`${colorize(opcion.question, 'red')}`, respuesta1 =>{
