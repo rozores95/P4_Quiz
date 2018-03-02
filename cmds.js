@@ -105,10 +105,8 @@ exports.playCmd = rl => {
     
     const jugaraux=() => {
       if (b === 0 ){
-        log(`No hay nada más que perguntar,`);
-        log('Fin del juego. Aciertos:' + marcador );
-        biglog(marcador,'blue' );
-        rl.prompt();
+          log("Fin del juego. Aciertos "+marcador);
+     biglog(marcador,'magenta')  ;    rl.prompt();
       } else{
         let pos = Math.round(Math.random()*(b-1)+parseInt(0));
         //log (pos);
