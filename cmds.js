@@ -105,7 +105,8 @@ exports.playCmd = rl => {
     
     const jugaraux=() => {
       if (b === 0 ){
-        log(`No quedan preguntas`);
+        log(`No hay nada más que perguntar,`);
+        log('Fin del juego. Aciertos:' + marcador );
         biglog(marcador,'blue' );
         rl.prompt();
       } else{
@@ -121,12 +122,13 @@ exports.playCmd = rl => {
          respuesta = respuesta1.trim();
         if(respuesta === opcion.answer){
           marcador++;
-          log('CORRECTO, lleva '  + marcador +  ' aciertos');
+          log('CORRECTO - Lleva '  + marcador +  ' aciertos');
            
             jugaraux();      
          
        }else {
          log( 'INCORRECTO');
+         log('Fin del juego. Aciertos:' + marcador );
          biglog ( marcador, 'magenta');
          rl.prompt();
        }  
