@@ -61,7 +61,7 @@ exports.showCmd = (rl, id) => {
  
 exports.testCmd = (rl, id) => {
 if (typeof id === "undefined"){
-    log(`Falta el parámetro id.`);
+     errorlog(`Falta el parámetro id.`);
    }else {
      try{
        const quiz = model.getByIndex(id);
@@ -84,7 +84,7 @@ if (typeof id === "undefined"){
     
    }
     catch(error){
-      log(error.message);
+       errorlog(error.message);
      }
    
     rl.prompt();
