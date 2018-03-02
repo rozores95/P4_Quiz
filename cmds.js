@@ -68,13 +68,13 @@ if (typeof id === "undefined"){
       rl.question(`${colorize(quiz.question, 'red')}`, respuesta1 =>{
        respuesta = respuesta1.trim();
         if(respuesta === quiz.answer){
-        log("Su respuesta es:");
+        log("Su respuesta es correcta.");
         biglog('Correcta', 'green');
         rl.prompt();
       
         
         }else{
-        log("Su respuesta es:");
+        log("Su respuesta es incorrecta.");
         biglog("Incorrecta", 'red');
         rl.prompt();
       }
