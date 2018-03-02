@@ -120,13 +120,13 @@ exports.playCmd = rl => {
          respuesta = respuesta1.trim();
         if(respuesta === opcion.answer){
           marcador++;
-          log('CORRECTO - Lleva '  + marcador +  ' aciertos');
+          log("CORRECTO - Lleva  "  +marcador+"   aciertos");
            
             jugaraux();      
          
        }else {
-         log( 'INCORRECTO');
-         log('Fin del juego. Aciertos:' + marcador );
+         log( "INCORRECTO");
+         log("Fin del juego. Aciertos "+marcador);
          biglog ( marcador, 'magenta');
          rl.prompt();
        }  
