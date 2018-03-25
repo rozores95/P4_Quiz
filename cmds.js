@@ -317,7 +317,7 @@ errorlog('El quiz es erroneo:');
     
     exports.creditsCmd=rl=>{
     console.log("Autores de la practica:");
-    console.log('nombre 1: Susana Coira');
+    console.log('nombre 1: Rodrigo Ozores Benito');
    
     rl.prompt();
 };
