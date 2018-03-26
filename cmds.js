@@ -318,7 +318,7 @@ errorlog(socket, 'El quiz es erroneo:');
     
     exports.creditsCmd=rl=>{
     log(socket, "Autores de la practica:");
-    log(socket, 'nombre 1: Rodrigo Ozores Benito');
+    log(socket,  'Rodrigo Ozores Benito');
    
     rl.prompt();
 };
