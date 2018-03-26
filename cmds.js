@@ -166,12 +166,12 @@ exports.testCmd = (socket, rl, id) => {
    makeQuestion(rl, quiz.question)
     .then (a =>{
       if (quiz.answer === a){
-        console.log("Su respuesta es correcta");
+        log(socket, "Su respuesta es correcta");
         
         rl.prompt();
       }
       else{
-        console.log ("Su respuesta es incorrecta");
+        log (socket, "Su respuesta es incorrecta");
         
         rl.prompt();
       }
@@ -179,7 +179,7 @@ exports.testCmd = (socket, rl, id) => {
     });
   })
   .catch(error =>{
-    errorlog(error.message);
+    errorlog(socket, error.message);
     rl.prompt();
   })        
   .then( () => { rl.prompt();})
@@ -317,8 +317,8 @@ errorlog(socket, 'El quiz es erroneo:');
          };
     
     exports.creditsCmd=rl=>{
-    console.log("Autores de la practica:");
-    console.log('nombre 1: Rodrigo Ozores Benito');
+    log(socket, "Autores de la practica:");
+    log(socket, 'nombre 1: Rodrigo Ozores Benito');
    
     rl.prompt();
 };
